@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.utilisateur.tennistracker.History">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="History"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView2" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Game 1"
+            android:id="@+id/buttonG1"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Game 2"
+            android:id="@+id/buttonG2"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Game 3"
+            android:id="@+id/buttonG3"
+            android:layout_row="0"
+            android:layout_column="2" />
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/historyFrame">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/dateSH"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/dateEH"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Player 1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:id="@+id/player1H"
+                android:layout_row="0"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/grey"
+                android:textAlignment="center"
+                android:id="@+id/p1s1H"
+                android:layout_row="0"
+                android:layout_column="2" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/grey"
+                android:textAlignment="center"
+                android:id="@+id/p1s2H"
+                android:layout_row="0"
+                android:layout_column="3" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/grey"
+                android:textAlignment="center"
+                android:id="@+id/p1s3H"
+                android:layout_row="0"
+                android:layout_column="4" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Player 2"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:id="@+id/player2H"
+                android:layout_row="2"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/grey"
+                android:textAlignment="center"
+                android:id="@+id/p2s1H"
+                android:layout_row="2"
+                android:layout_column="2" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/grey"
+                android:textAlignment="center"
+                android:id="@+id/p2s2H"
+                android:layout_row="2"
+                android:layout_column="3" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/grey"
+                android:textAlignment="center"
+                android:id="@+id/p2s3H"
+                android:layout_row="2"
+                android:layout_column="4" />
+
+        </GridLayout>
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+</LinearLayout>
